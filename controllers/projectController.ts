@@ -3,7 +3,13 @@ import { Project, Owner} from '../models/projectModel'
 
 
 export const getProjects = (req: Request, res: Response) => {
-    const projects: Project[] = [];
+    const projects: Project[] = [{
+        name: "Project1",
+        fullName: "FullProject1",
+        description: "Lorem Ipsum",
+        language: "Français",
+        htmlUrl: "urldemonprojet"
+    }];
     const owner: Owner = {
         login: "JohnDoe",
         htmlUrl: "string",
