@@ -2,7 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getProjects = void 0;
 const getProjects = (req, res) => {
-    const projects = [];
+    const projects = [{
+            name: "Project1",
+            fullName: "FullProject1",
+            description: "Lorem Ipsum",
+            language: "Français",
+            htmlUrl: "urldemonprojet"
+        }];
     const owner = {
         login: "JohnDoe",
         htmlUrl: "string",

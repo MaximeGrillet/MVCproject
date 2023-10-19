@@ -1,13 +1,13 @@
-
-import express from 'express';
-import { getProjects } from './controllers/projectController';
-
+import express, { Request, Response } from 'express';
 const app = express();
 const port = 3000;
 
+app.set('view engine', 'ejs');
 
-app.get('/projects', getProjects);
+app.get('/', (req: Request, res: Response) => {
+  res.render('dashboard');
+});
 
 app.listen(port, () => {
-  console.log(`le serveur est lancé : ${port}`);
+  console.log(`Example app listening on port ${port}`);
 });

@@ -4,10 +4,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const projectController_1 = require("./controllers/projectController");
 const app = (0, express_1.default)();
 const port = 3000;
-app.get('/projects', projectController_1.getProjects);
+app.set('view engine', 'ejs');
+app.get('/', (req, res) => {
+    res.render('dashboard');
+});
 app.listen(port, () => {
-    console.log(`le serveur est lancé : ${port}`);
+    console.log(`Example app listening on port ${port}`);
 });
